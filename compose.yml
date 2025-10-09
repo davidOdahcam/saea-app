@@ -1,0 +1,19 @@
+services:
+  frontend:
+    container_name: saea-app
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - saea-net
+
+networks:
+  saea-net:
+    driver: bridge
