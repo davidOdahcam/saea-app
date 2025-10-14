@@ -4,7 +4,7 @@ import { BookableResource, ResourceStatus } from '@/features/floorplan/models/bo
 import { tap } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
-export class ReservableResourceService {
+export class BookableResourceService {
     private readonly _http = inject(HttpClient);
     // TODO: Definir a URL correta ao desenvolver o backend
     private readonly _baseUrl: string = 'https://api.example.com/resources';
