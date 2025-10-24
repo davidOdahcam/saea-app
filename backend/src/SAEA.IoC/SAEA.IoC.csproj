@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SAEA.Application\SAEA.Application.csproj" />
+    <ProjectReference Include="..\SAEA.Domain\SAEA.Domain.csproj" />
+    <ProjectReference Include="..\SAEA.Infrastructure\SAEA.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
