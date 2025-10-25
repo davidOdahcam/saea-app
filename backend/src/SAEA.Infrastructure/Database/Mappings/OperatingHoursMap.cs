@@ -4,9 +4,9 @@ using SAEA.Domain.Models;
 
 namespace SAEA.Infrastructure.Database.Mappings
 {
-    public sealed class OperatingHoursMap : IEntityTypeConfiguration<OperatingHours>
+    public sealed class OperatingHoursMap : IEntityTypeConfiguration<OperatingHour>
     {
-        public void Configure(EntityTypeBuilder<OperatingHours> builder)
+        public void Configure(EntityTypeBuilder<OperatingHour> builder)
         {
             builder.ToTable("TB_OPERATING_HOURS");
 

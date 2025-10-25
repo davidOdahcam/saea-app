@@ -15,7 +15,12 @@ namespace SAEA.IoC.Configs
         public static void ConfigureAppClasses(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<IPavilionRepository, PavilionRepository>();
+            services.AddScoped<IOperatingBlockRepository, OperatingBlockRepository>();
+            services.AddScoped<IOperatingHourRepository, OperatingHourRepository>();
+
             services.AddScoped<IPavilionAppService, PavilionAppService>();
+
+            services.AddScoped<IAvailabilityService, AvailabilityService>();
             services.AddScoped<IPavilionService, PavilionService>();
         }
     }

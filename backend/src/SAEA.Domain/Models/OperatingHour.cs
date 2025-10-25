@@ -2,7 +2,7 @@
 
 namespace SAEA.Domain.Models
 {
-    public sealed class OperatingHours
+    public sealed class OperatingHour
     {
         public Guid Id { get; init; }
         public EResourceType ResourceType { get; set; }

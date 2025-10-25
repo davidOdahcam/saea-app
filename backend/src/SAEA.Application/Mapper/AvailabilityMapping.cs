@@ -4,11 +4,11 @@ using SAEA.Domain.Models;
 
 namespace SAEA.Application.Mapper
 {
-    public sealed class PavilionMapping : IRegister
+    public sealed class AvailabilityMapping : IRegister
     {
         public void Register(TypeAdapterConfig config)
         {
-            config.NewConfig<Pavilion, PavilionResponse>();
+            config.NewConfig<DateAvailability, DateAvailabilityResponse>();
         }
     }
 }

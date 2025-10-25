@@ -10,9 +10,16 @@ namespace SAEA.API.Controllers
     {
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<PavilionResponse>), StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetListPavilions()
+        public async Task<IActionResult> GetListPavilionsAsync()
         {
             return Ok(await pavilionAppService.GetListPavilionsAsync());
+        }
+
+        [HttpGet("{id}/Availability")]
+        [ProducesResponseType(typeof(DateAvailabilityResponse), StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetDateAvailabilityByPavilionIdAsync(Guid id)
+        {
+            return Ok(await pavilionAppService.GetDateAvailabilityByPavilionIdAsync(id));
         }
     }
 }
