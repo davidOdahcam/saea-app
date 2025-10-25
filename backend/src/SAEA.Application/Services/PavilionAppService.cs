@@ -1,4 +1,5 @@
-﻿using SAEA.Application.Services.Interfaces;
+﻿using Mapster;
+using SAEA.Application.Services.Interfaces;
 using SAEA.DataTransfer.Responses;
 using SAEA.Domain.Services.Interfaces;
 
@@ -8,10 +9,10 @@ namespace SAEA.Application.Services
         IPavilionService pavilionService
     ) : IPavilionAppService
     {
-        public async Task<GetListPavilionsResponse> GetListPavilionsAsync()
+        public async Task<IEnumerable<PavilionResponse>> GetListPavilionsAsync()
         {
             var list = await pavilionService.GetListAsync();
-            return new GetListPavilionsResponse(list);
+            return list.Adapt<IEnumerable<PavilionResponse>>();
         }
     }
 }

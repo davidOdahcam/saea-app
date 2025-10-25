@@ -7,7 +7,7 @@ namespace SAEA.IoC.Configs
 {
     public static class SqlServerConfig
     {
-        public static void AddSqlServer(this IServiceCollection services, IConfiguration configuration)
+        public static void ConfigureSqlServer(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<SAEAContext>(options =>
             {

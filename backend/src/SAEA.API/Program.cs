@@ -1,3 +1,4 @@
+using Mapster;
 using SAEA.IoC;
 
 namespace SAEA.API
@@ -49,6 +50,8 @@ namespace SAEA.API
 
             builder.Services.AddOpenApi();
 
+            builder.Services.AddMapster();
+
             NativeInjectorBootStrapper.RegisterServices(builder.Services, builder.Configuration);
         }
 
@@ -60,8 +63,11 @@ namespace SAEA.API
             }
 
             app.UseHttpsRedirection();
+
             app.UseCors(_corsPolicyName);
+
             app.UseAuthorization();
+
             app.MapControllers();
         }
     }

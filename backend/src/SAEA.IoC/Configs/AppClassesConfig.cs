@@ -12,7 +12,7 @@ namespace SAEA.IoC.Configs
 {
     public static class AppClassesConfig
     {
-        public static void AddAppClasses(this IServiceCollection services, IConfiguration configuration)
+        public static void ConfigureAppClasses(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<IPavilionRepository, PavilionRepository>();
             services.AddScoped<IPavilionAppService, PavilionAppService>();
