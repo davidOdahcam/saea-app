@@ -8,6 +8,7 @@ namespace SAEA.IoC
     {
         public static void RegisterServices(IServiceCollection services, IConfiguration configuration)
         {
+            services.AddAppClasses(configuration);
             services.AddSqlServer(configuration);
         }
     }
